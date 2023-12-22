@@ -6,6 +6,7 @@
     $validation_error = "";
     $existing_users = ["admin", "guest"];
 
+    # Helper function to print data to the console to help debugging
     function consoleLog($data) {
       $output = $data;
       if (is_array($output))
@@ -62,7 +63,6 @@
       // Validate the username
       $raw_name = removeSpaces(
           htmlentities($raw_name));
-
       if (isNewUser($raw_name)) {
         $name = $raw_name;
       } else {
